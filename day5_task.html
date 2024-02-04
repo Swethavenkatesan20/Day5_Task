@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//TASK1: create resume in json format        
+        let resume={
+            "name":"swetha",
+            "contact":
+            {
+                "emailid":"swethavenkatesan0@gmail.com",
+                "contactNumber":"6362384445"
+            },
+            "education":[
+                {
+                    "degree":"BE",
+                    "university":"anna university",
+                    "year":"2016 to 2020",
+                    "specialization":"computer science",
+                    "grade":"7.6"
+                },
+                {
+                    "school":"shree niketan",
+                    "specialization":"computer science",
+                    "grade":"12th",
+                    "percentage":"86"
+                }
+            ],
+            "experience":"1.6 years of experience in accenture as ASE",
+            "skills":["javascript","html","css","github"]
+        }
+
+//task2: iterate over loop        
+        console.log("for loop");
+        for(i=0;i<Object.keys(resume).length;i++){
+           let key =Object.keys(resume)[i]
+           console.log(key,resume[key]);
+        }
+        console.log("for in");
+        for(let key in resume){
+            console.log(key,resume[key]);
+        }
+        console.log("for of");
+        for(let [key,values] of Object.entries(resume))
+        {
+            console.log(key,values);
+        }
+        console.log("for each");
+        Object.entries(resume).forEach(([key,value])=>{
+        console.log(key,value)});
+    </script>
+</body>
+</html>
